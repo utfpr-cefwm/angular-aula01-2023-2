@@ -1,5 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+const CLASSES_PADRAO = {
+  zero: 'zero',
+  positivo: 'positivo',
+  negativo: 'negativo',
+};
+export type ClassNamesDeValor = typeof CLASSES_PADRAO;
+
 @Pipe({
   name: 'classNamePorValor',
   standalone: true
@@ -11,13 +18,16 @@ export class ClassNamePorValorPipe implements PipeTransform {
    *
    * @param valor Número a ser verificado.
    */
-  public transform(valor: number): string {
+  public transform(
+    valor: number,
+    classes: ClassNamesDeValor = CLASSES_PADRAO,
+  ): string {
     if (valor >= 0.005) {
-      return 'positivo';
+      return classes.positivo;
     } else if (valor > -0.005 && valor < 0.005) {
-      return 'zero';
+      return classes.zero;
     } else {
-      return 'negativo';
+      return classes.negativo;
     }
   }
 

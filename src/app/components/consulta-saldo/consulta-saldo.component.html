@@ -16,7 +16,9 @@
     @if (cliente.creditoPreAprovado !== undefined) {
       <div>
         <b>Crédito pré-aprovado</b>:
-        <span [className]="cliente.creditoPreAprovado | classNamePorValor">
+        <span
+          [className]="cliente.creditoPreAprovado | classNamePorValor: creditoPreAprovadoClasses"
+        >
           {{ cliente.creditoPreAprovado | currency }}
         </span>
       </div>
