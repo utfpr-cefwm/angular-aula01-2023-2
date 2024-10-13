@@ -13,5 +13,13 @@
         {{ cliente.saldo | currency }}
       </span>
     </div>
+    @if (cliente.creditoPreAprovado !== undefined) {
+      <div>
+        <b>Crédito pré-aprovado</b>:
+        <span [className]="getClassNamePorValor(cliente.creditoPreAprovado)">
+          {{ cliente.creditoPreAprovado | currency }}
+        </span>
+      </div>
+    }
   </header>
 </div>

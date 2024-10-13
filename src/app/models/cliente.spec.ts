@@ -20,4 +20,23 @@ describe('Cliente', () => {
     expect(cliente.nome).toBe('José Pereira');
   });
 
+  describe('creditoPreAprovado', () => {
+
+    it('deve retornar 0 para clientes com baixo saldo', () => {
+      cliente.saldo = 49.99;
+      expect(cliente.creditoPreAprovado).toBe(0);
+    });
+
+    it('deve retornar 0 para clientes com baixo saldo (limiar)', () => {
+      cliente.saldo = 49.999;
+      expect(cliente.creditoPreAprovado).toBe(0);
+    });
+
+    it('deve retornar 0 para clientes com alto saldo', () => {
+      cliente.saldo = 50.00;
+      expect(cliente.creditoPreAprovado).toBe(100);
+    });
+
+  });
+
 });
