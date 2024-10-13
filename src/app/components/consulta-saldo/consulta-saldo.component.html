@@ -8,7 +8,10 @@
       <b>Cliente</b>: {{ cliente.nome | uppercase }}
     </div>
     <div>
-      <b>Saldo</b>: {{ cliente.saldo | currency }}
+      <b>Saldo</b>:
+      <span [className]="getClassNamePorValor(cliente.saldo)">
+        {{ cliente.saldo | currency }}
+      </span>
     </div>
   </header>
 </div>
