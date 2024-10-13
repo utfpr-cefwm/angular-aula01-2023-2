@@ -2,7 +2,7 @@
   <h1>Consulta saldo</h1>
   <header>
     <div class="atenuado">
-      Último login: {{ cliente.ultimoLogin | date }}
+      Último login: {{ cliente.ultimoLogin | date:'short' }}
     </div>
     <div>
       <b>Cliente</b>: {{ cliente.nome | uppercase }}
