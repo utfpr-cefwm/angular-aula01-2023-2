@@ -6,6 +6,7 @@ import {
   ClassNamePorValorPipe,
   ClassNamesDeValor,
 } from '../../pipes/class-name-por-valor.pipe';
+import { MensagemDeMouseOverDirective } from '../../directives/mensagem-de-mouse-over.directive';
 
 @Component({
   selector: 'app-consulta-saldo',
@@ -13,6 +14,7 @@ import {
   imports: [
     CommonModule,
     ClassNamePorValorPipe,
+    MensagemDeMouseOverDirective,
   ],
   templateUrl: './consulta-saldo.component.html',
   styleUrl: './consulta-saldo.component.css'
