@@ -9,14 +9,14 @@
     </div>
     <div>
       <b>Saldo</b>:
-      <span [className]="getClassNamePorValor(cliente.saldo)">
+      <span [className]="cliente.saldo | classNamePorValor">
         {{ cliente.saldo | currency }}
       </span>
     </div>
     @if (cliente.creditoPreAprovado !== undefined) {
       <div>
         <b>Crédito pré-aprovado</b>:
-        <span [className]="getClassNamePorValor(cliente.creditoPreAprovado)">
+        <span [className]="cliente.creditoPreAprovado | classNamePorValor">
           {{ cliente.creditoPreAprovado | currency }}
         </span>
       </div>
