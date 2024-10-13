@@ -25,12 +25,10 @@ export class ConsultaSaldoComponent {
     new Date(),
   );
 
-  public get creditoPreAprovadoClasses(): ClassNamesDeValor {
-    return {
-      zero: 'zero',
-      positivo: 'positivo destaque',
-      negativo: 'negativo',
-    }
+  public creditoPreAprovadoClasses: ClassNamesDeValor = {
+    zero: 'zero',
+    positivo: 'positivo destaque',
+    negativo: 'negativo',
   };
 
 }
