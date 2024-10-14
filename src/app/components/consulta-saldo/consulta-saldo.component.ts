@@ -39,7 +39,7 @@ export class ConsultaSaldoComponent {
     ),
   ];
 
-  public cliente: Cliente = this.clientes[0];  // Primeiro cliente selecionado por padrão.
+  public cliente?: Cliente;  // Nenhum cliente selecionado por padrão.
 
   public creditoPreAprovadoClasses: ClassNamesDeValor = {
     zero: 'zero',
