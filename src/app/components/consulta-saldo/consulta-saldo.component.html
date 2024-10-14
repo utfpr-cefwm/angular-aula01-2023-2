@@ -1,5 +1,12 @@
 <div>
   <h1>Consulta saldo</h1>
+  <nav>
+    @for (c of clientes; track $index) {
+      <button type="button" (click)="cliente = c">
+        {{c.nome}}
+      </button>
+    }
+  </nav>
   <header>
     <div class="atenuado">
       Último login: {{ cliente.ultimoLogin | date:'short' }}

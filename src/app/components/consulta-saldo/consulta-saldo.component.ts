@@ -21,11 +21,25 @@ import { MensagemDeMouseOverDirective } from '../../directives/mensagem-de-mouse
 })
 export class ConsultaSaldoComponent {
 
-  public cliente: Cliente = new Cliente(
-    'Maria das Couves',
-    99.99,
-    new Date(),
-  );
+  public clientes: Cliente[] = [
+    new Cliente(
+      'Maria das Couves',
+      99.99,
+      new Date('2024-10-10 13:45:00'),
+    ),
+    new Cliente(
+      'José das Neves',
+      0.0,
+      new Date('2024-10-11 14:50:00'),
+    ),
+    new Cliente(
+      'José das Neves',
+      -2.0,
+      new Date('2024-10-12 15:59:00'),
+    ),
+  ];
+
+  public cliente: Cliente = this.clientes[0];  // Primeiro cliente selecionado por padrão.
 
   public creditoPreAprovadoClasses: ClassNamesDeValor = {
     zero: 'zero',
